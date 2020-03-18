@@ -1,0 +1,181 @@
+.consult {
+    padding: 105px 0 84px;
+    position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 32%;
+            background: url('../img/consult-bottom.jpg') no-repeat;
+            background-size: cover;
+            background-position: top left;
+            z-index: -1;
+        }
+    @media screen and (max-width: 1115px) {
+        padding: 40px 0;
+    }
+    &__body {
+        background: #fff;
+        padding-bottom: 20px;
+    }
+    &__top {
+        display: flex;
+        padding: 55px 144px 90px 40px;
+        @media screen and (max-width: 579px) {
+            flex-wrap: wrap;
+        }
+        position: relative;
+        background: url('../img/contact-bg.jpg') no-repeat;
+        background-size: cover;
+        background-position: top left;
+    }
+    &__part {
+        width: 50%;
+        padding-left: 123px;
+    }
+    
+    &__title {
+        margin-top: 65px;
+        font-size: 30px;
+        line-height: 40px;
+        font-family: "BebasNeueCyrillic", Arial, Helvetica, sans-serif;
+        margin-bottom: 8px;
+        @media screen and (max-width: 1115px) {
+            font-size: 33px;
+            line-height: 1.2;
+        }
+        @media screen and (max-width: 680px) {
+            font-size: 24px;
+        }
+        img {
+            display: inline-block;
+            width: 22px;
+            margin-right: 20px;
+        }
+    }
+    &__line {
+        border-right: 1px solid #212121;
+    }
+    &__text {
+        font-weight: 200;
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+    &__bottom {
+        display: flex;
+        background: #fff;
+        padding: 95px 144px 30px 70px;
+        .consult__title {
+            margin-top: 11px;
+        }
+        .consult__part:nth-child(1) {
+            display: flex;
+        }
+        .logo__text {
+            padding: 65px 23px 13px;
+        }
+    }
+    &__menu {
+        margin: 0 auto;
+        a {
+            display: block;
+            padding: 8px 0;
+        }
+    }
+    &__icons {
+        margin-left: auto;
+        margin-top: -27px;
+    }
+    &__icon {
+        width: 22px;
+    }
+    &__copy {
+        padding-left: 123px;
+        font-size: 12px;
+        line-height: 16px;
+        padding-right: 54px;
+    }
+    &__policy {
+        font-size: 12px;
+        line-height: 16px;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+.btn-finish {
+    padding-top: 20px;
+}
+.form-line {
+    display: flex;
+    align-items: center;
+    padding-bottom: 18px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #212121;
+    @media screen and (max-width: 890px) {
+        margin-bottom: 10px;
+    }
+}
+.agree-line {
+    font-size: 14px;
+    line-height: 18px;
+    position: relative;
+    padding: 30px 0;
+    @media screen and (max-width: 890px) {
+        display: block;
+        width: 100%;
+        max-width: 350px;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    span {
+        color: $accent;
+    }
+    input {
+        display: none;
+        &:checked+label:before {
+            background: #212121;
+        }
+        &:checked+label:after {
+            content: "";
+            position: absolute;
+            left: 2px;
+            width: 12px;
+            height: 6px;
+            border: 2px solid #fff;
+            border-top: none;
+            border-right: none;
+            top: 46%;
+            -webkit-transform: translate(0,-50%) rotate(-45deg);
+            -ms-transform: translate(0,-50%) rotate(-45deg);
+            transform: translate(0,-50%) rotate(-45deg);
+        }
+    }
+    label {
+        position: relative;
+        display: block;
+        padding-left: 27px;
+        @media screen and (max-width: 580px) {
+            text-align: left;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(0,-50%);
+            width: 18px;
+            height: 18px;
+            border: none;
+            background: #fff;
+        }
+    }
+        
+}
+input.empty_field {
+    border: 1px solid red;
+}

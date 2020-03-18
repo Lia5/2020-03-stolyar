@@ -1,0 +1,83 @@
+.idea {
+    padding: 151px 0 162px;
+    overflow: hidden;
+    &__wrap {
+        display: flex;
+        margin-top: 77px;
+    }
+    &__body {
+        position: relative;
+        width: 40%;
+        background: #fff;
+        z-index: 2;
+    }
+    &__body-wrap {
+        max-width: 374px;
+        margin-left: auto;
+        padding-top: 62px;
+    }
+    &__title {
+        max-width: 280px;
+        font-size: 50px;
+        line-height: 60px;
+        font-family: "BebasNeueCyrillic", Arial, Helvetica, sans-serif;
+    }
+    &__slider {
+        position: relative;
+        z-index: 1;
+        width: 60%;
+        // overflow: hidden;
+    }
+    &__items {
+        width: 70%;
+    }
+    &__pic {
+        position: relative;
+        img {
+            height: 334px;
+        }
+    }
+    &__num {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: #f9f9f9;
+        font-size: 78px;
+        line-height: 61px;
+        font-family: "BebasNeueCyrillic", Arial, Helvetica, sans-serif;
+        
+    }
+    &__item-text {
+        font-family: "BebasNeueCyrillic", Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        line-height: 35px;
+        margin-top: 24px;
+        max-width: 250px;
+    }
+    &__btn {
+        margin-top: 55px;
+    }
+    .owl-carousel .owl-stage-outer {
+        overflow: visible;
+    }
+    .owl-item:not(.active) {
+        opacity: 0.5;
+    }
+    .owl-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        svg {
+            width: 25px;
+        }
+        button.owl-prev, 
+        button.owl-next {
+            padding: 5px!important;
+            background: #fff;
+            outline: none;
+        }
+    }
+    .owl-prev {
+        transform: scale(-1, 1);;
+    }
+}

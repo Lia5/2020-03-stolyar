@@ -1,0 +1,110 @@
+.home {
+    position: relative; 
+    padding-bottom: 61px;
+    @media screen and (max-width: 1660px) {
+        overflow: hidden;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -413px;
+        left: 0;
+        width: 327px;
+        height: 733px;
+        background: url('../img/home-pic.png') no-repeat;
+    }
+    .wrap {
+        display: flex;
+        @media screen and (max-width: 580px) {
+            flex-wrap: wrap;
+        }
+    }
+    &__body {
+        width: 50%;
+        max-width: 698px;
+        padding-top: 135px;
+        padding-right: 20px;
+        padding-bottom: 150px;
+        @media screen and (max-width: 580px) {
+            display: flex;
+            flex-direction: column;
+           justify-content: center;
+           padding-right: 0;
+           padding-bottom: 40px;
+        }
+    }
+    &__pre {
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 200;
+        margin-bottom: 31px;
+        @media screen and (max-width: 580px) {
+            font-size: 14px;
+            line-height: 1.2;
+        }
+
+    }
+    &__pic {
+        position: relative;
+        width: 50%;
+        &:after {
+            content: "";
+            width: 704px;
+            height: 704px;
+            background: url('../img/home-bg.jpg') no-repeat;
+        }
+    }
+
+    &__title {
+        font-size: 77px;
+        line-height: 80px;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        font-family: "BebasNeueCyrillic", Arial, Helvetica, sans-serif;
+        @media screen and (max-width: 1660px) {
+            font-size: 45px;
+            line-height: 1.2;
+        }
+        @media screen and (max-width: 580px) {
+            font-size: 24px;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        @media screen and (max-width: 665px) {
+            flex-direction: column;
+        }
+        .btn {
+            @media screen and (max-width: 580px) {
+                width: 242px;
+                margin: 0 auto;
+                padding: 12px 10px;
+                font-size: 12px;
+            }
+        }
+    }
+    &__text {
+        font-size: 18px;
+        line-height: 26px;
+        background: #fff;
+        @media screen and (max-width: 1115px) {
+            font-size: 14px;
+            line-height: 1.2;
+            padding: 20px;
+        }
+        @media screen and (max-width: 580px) {
+
+        }
+    }
+    &__pic {
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}

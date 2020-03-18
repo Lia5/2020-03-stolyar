@@ -1,0 +1,53 @@
+.life {
+    padding: 158px 0 17px;
+    &__body {
+        display: flex;
+        margin-top: 60px;
+    }
+    &__left {
+        width: 60%;
+        padding-right: 13px;
+        display: flex;
+        flex-wrap: wrap;
+        .life__pic {
+            width: 30%;
+        }
+        .life__pic:nth-child(4) {
+            width: 55%;
+        }
+        .life__pic:nth-child(2) {
+        }
+        .life__pic:nth-child(3) {
+            margin-right: 0;
+        }
+    }
+    &__right {
+        width: 40%;
+        padding-left: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        .life__pic {
+            width: 47%;
+            width: calc(50% - 25px);
+        }
+        .life__pic:nth-child(1) {
+            margin-right: 0;
+            width: 100%;
+        }
+        .life__pic:nth-child(2) {
+            margin-right: 25px;
+        }
+
+    }
+    &__pic {
+        margin-right: 24px;
+        margin-bottom: 25px;
+        flex-grow: 1;
+        img {
+            width: 100%;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

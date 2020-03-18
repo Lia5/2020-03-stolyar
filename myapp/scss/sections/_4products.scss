@@ -1,0 +1,75 @@
+.products {
+    padding: 143px 0 128px;
+    overflow: hidden;
+    &__wrap {
+        position: relative;
+        margin-top: 74px;
+    }
+    &__items {
+        width: 72%;
+        .owl-item:not(.active) {
+            opacity: 0.5;
+            .products__body {
+                opacity: 0;
+            }
+        }
+    }
+    &__body {
+        .wrap {
+            max-width: 77%;
+            display: flex;
+            margin-right: 0;
+        }
+    }
+    &__num {
+        font-size: 18px;
+        line-height: 28px;
+        font-family: "BebasNeueCyrillic", Arial, Helvetica, sans-serif;
+    }
+    &__title {
+        padding: 0 60px;
+        font-size: 36px;
+        line-height: 42px;
+        font-family: "BebasNeueCyrillic", Arial, Helvetica, sans-serif;
+    }
+    &__text {
+        width: 80%;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 200;
+    }
+    &__pic {
+        position: relative;
+        &-num {
+            position: absolute;
+            top: -41px;
+            left: 16%;
+            font-family: "BebasNeueCyrillic", Arial, Helvetica, sans-serif;
+
+            font-size: 225px;
+            line-height: 260px;
+            color: #292929;
+            -webkit-text-stroke: 1px #292929;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+.products__items {
+    .owl-stage-outer {
+        overflow: visible;
+    }
+    .owl-nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        svg {
+            width: 25px;
+        }
+    }
+    .owl-prev {
+        display: none;
+    }
+    .owl-next{
+        outline: none;
+    }
+}

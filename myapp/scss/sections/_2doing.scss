@@ -1,0 +1,35 @@
+.doing {
+    padding: 102px 0 157px;
+    &__items {
+        display: flex;
+        font-size: 14px;
+        line-height: 24px;
+        margin-top: 76px;
+    }
+    &__item {
+        display: flex;
+        flex-grow: 1;
+        padding: 0 5px;
+        &:nth-child(1),
+        &:nth-child(4) {
+            max-width: 469px;
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+            max-width: 363px;
+        }
+        
+    }
+    &__num {
+        font-family: "BebasNeueCyrillic", Arial, Helvetica, sans-serif;
+        font-size: 81px;
+        line-height: 107px;
+        margin-right: 25px;
+        color: $accent;
+        -webkit-text-stroke: 1px $accent;
+        -webkit-text-fill-color: white;
+    }
+    &__text {
+
+    }
+}

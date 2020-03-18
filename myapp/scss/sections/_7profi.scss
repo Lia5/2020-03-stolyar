@@ -1,0 +1,35 @@
+.profi {
+    padding: 130px 0 120px;
+    background: #000 url('../img/profi-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #f9f9f9;
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 87px;
+    }
+    &__item {
+        display: flex;
+        width: 30%;
+        max-width: 310px;
+    }
+    &__pic {
+        width: 70px;
+        margin-right: 10px;
+        img {
+            width: 100%;
+        };
+    }
+    &__title {
+        font-family: "BebasNeueCyrillic", Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        line-height: 1.2;
+    }
+    &__text {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 200;
+    }
+}
