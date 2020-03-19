@@ -36,6 +36,7 @@
         @media screen and (max-width: 579px) {
             flex-wrap: wrap;
             margin-bottom: 20px;
+            justify-content: center;
         }
     }
     &__title {
@@ -82,7 +83,7 @@
         font-size: 30px;
         line-height: 35px;
         margin-top: 24px;
-        max-width: 250px;
+        max-width: 199px;
         @media screen and (max-width: 579px) {
             font-size: 25px;
             line-height: 1.2;
@@ -92,8 +93,17 @@
         margin-top: 55px;
         @media screen and (max-width: 880px) {
             margin-top: 0;
+            display: none;
             a {
                 margin-top: 0;
+            }
+
+        }
+        &--mob {
+            display: none;
+            @media screen and (max-width: 880px) {
+                display: block;
+                margin: 30px auto 0;
             }
         }
     }

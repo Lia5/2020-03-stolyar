@@ -15,7 +15,7 @@
         max-width: 820px;
 
         @media screen and (max-width: 880px) {
-            margin-top: 40px;
+            margin-top: 60px;
         }
     }
     &__item {
@@ -32,8 +32,11 @@
     }
     &__pic {
         margin-right: 20px;
+        min-width: 110px;
+        max-width: 110px;
         @media screen and (max-width: 579px) {
             min-width: 62px;
+            max-width: none;
         }
         img {
             width: 100%;

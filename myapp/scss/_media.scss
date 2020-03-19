@@ -28,6 +28,9 @@
             transition-duration: .3s;
         }
         &.active {
+            .one, .two, .three {
+                background: #fff;
+            }
             .one,
             .three {
                 margin: 8px auto;
@@ -69,6 +72,12 @@
                 margin-top: 40px;
                 text-align: center;
             } 
+            a {
+                color: #fff;
+            }
+            .nav__icon {
+                display: none;
+            }
         }
     }
     .menu-wrap {

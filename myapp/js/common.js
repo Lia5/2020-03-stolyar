@@ -50,44 +50,18 @@ $(function() {
         }
     });
 
-    //Делегируем события кнопок next prev по умолчанию нашим кнопкам, которые могут находится ыне контейнера слайдера
-	var owl=$(".products__items.owl-carousel");
-	owl.owlCarousel();
-	//$(".next") - находим нашу кнопку
-	$(".next").click(function(){
-		owl.trigger("next.owl.carousel");
-	});
-	$(".prev").click(function(){
-		owl.trigger("prev.owl.carousel");
-	});
+    // //Делегируем события кнопок next prev по умолчанию нашим кнопкам, которые могут находится ыне контейнера слайдера
+	// var owl=$(".products__items.owl-carousel");
+	// owl.owlCarousel();
+	// //$(".next") - находим нашу кнопку
+	// $(".next").click(function(){
+	// 	owl.trigger("next.owl.carousel");
+	// });
+	// $(".prev").click(function(){
+	// 	owl.trigger("prev.owl.carousel");
+	// });
 
-
-
-    $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
-        $(this)
-          .addClass('active').siblings().removeClass('active')
-          .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
-      });
-
-      $('.institutions__slider').owlCarousel({
-        loop: false,
-        dots: false,
-        margin: 40,
-        nav: false,
-        // autoWidth:true,
-        // navText: ['<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><g transform="matrix(1 0 0 -1 0 1008)"><path d="M756.2,741.8L990,508L756.2,274.2l-27,27L918.1,490H10v36h908.1L729.3,714.8L756.2,741.8z"/></g></g></svg>', '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><g transform="matrix(1 0 0 -1 0 1008)"><path d="M756.2,741.8L990,508L756.2,274.2l-27,27L918.1,490H10v36h908.1L729.3,714.8L756.2,741.8z"/></g></g></svg>'],
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 2
-            },
-            1000: {
-                items: 2
-            }
-        }
-    });
+  
     //select-number form
     if(jQuery('.phone-mask').length) {
         jQuery(function($){
@@ -205,6 +179,7 @@ $(function() {
         var btn = $(this);
         $($(this).parent().parent().parent()).each(function () {
             var form = $(this);
+            console.log(form);
             form.find('.rfield').addClass('empty_field');
 
                 // Функция проверки полей формы
@@ -224,13 +199,13 @@ $(function() {
                     modal.removeClass('disabled');
                     modal.addClass('flex');
                     $('body').addClass('body-modal-open');
-                    console.log('form');
+                   
                     form2 = form.closest('form');
                     jQuery.ajax({
                         method: "POST",
                         data: form2.serialize(),
                         // url: quizAjax.url,
-                        url: '../sendamo.php',
+                        url: '../stolyar/sendamo.php',
                         dataType: "json",
                         success: function (json) {
                             // if (json.success) {
@@ -241,7 +216,7 @@ $(function() {
                     });
                     $(this).attr('href', "#").removeClass('modal-open').removeClass('kviz__btn').css('pointer-events', 'none');
                     $(this).parent().css('opacity', '0.5').css('pointer-events', 'none');
-                    fbq('track', 'Lead');
+                    // fbq('track', 'Lead');
                     }
                 // fbq('track', 'Lead');
 
@@ -272,35 +247,6 @@ document.addEventListener('DOMContentLoaded', function(){
         var navGamb = document.querySelector('.menu-toggle');
         navGamb.classList.toggle('active');
     });
-//tabs
-	// store tabs variable
-	var myTabs = document.querySelectorAll("ul.header__tabs > li");
-    function myTabClicks(tabClickEvent) {
-		for (var i = 0; i < myTabs.length; i++) {
-			myTabs[i].classList.remove("active");
-		}
-		var clickedTab = tabClickEvent.currentTarget;
-		clickedTab.classList.add("active");
-		tabClickEvent.preventDefault();
-		var myContentPanes = document.querySelectorAll(".tab-pane");
-		for (i = 0; i < myContentPanes.length; i++) {
-			myContentPanes[i].classList.remove("active");
-		}
-        var anchorReference = tabClickEvent.target;
-        console.log(anchorReference);
-        var activePaneId = anchorReference.getAttribute("href");
-        console.log(activePaneId);
-        var activePane = document.querySelector(activePaneId);
-        console.log(activePaneId);
-		activePane.classList.add("active");
-    }
-    for (i = 0; i < myTabs.length; i++) {
-		myTabs[i].addEventListener("click", myTabClicks)
-	}
-
-
-
-
 
 });
 
