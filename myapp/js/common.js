@@ -5,6 +5,10 @@ $(function() {
             $page.animate({
                 scrollTop: $($.attr(this, 'href')).offset().top
             }, 400);
+            if ( window.innerWidth < 1082 || window.screen.width < 1082) {
+                $('.main-menu').removeClass('active');
+                $('.menu-toggle').removeClass('active');
+            }
             return false;
         });
     }
@@ -37,7 +41,7 @@ $(function() {
             0: {
                 items: 1
             },
-            768: {
+            580: {
                 items: 2
             },
             1000: {

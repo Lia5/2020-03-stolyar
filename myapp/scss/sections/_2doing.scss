@@ -1,22 +1,47 @@
 .doing {
     padding: 102px 0 157px;
+    @media screen and (max-width: 880px) {
+        padding: 50px 0;
+    }
     &__items {
         display: flex;
         font-size: 14px;
         line-height: 24px;
         margin-top: 76px;
+        @media screen and (max-width: 1089px) {
+            flex-wrap: wrap;
+            max-width: 600px;
+            margin: 76px auto 0;
+        }
+        @media screen and (max-width: 579px) {
+           margin-top: 40px;
+        }
     }
     &__item {
         display: flex;
         flex-grow: 1;
         padding: 0 5px;
+        @media screen and (max-width: 1089px) {
+            width: 50%;
+        }
+        @media screen and (max-width: 579px) {
+            width: 100%;
+            margin-bottom: 20px;
+            align-items: center;
+        }
         &:nth-child(1),
         &:nth-child(4) {
             max-width: 469px;
+            @media screen and (max-width: 1089px) {
+                max-width: none;
+            }
         }
         &:nth-child(2),
         &:nth-child(3) {
             max-width: 363px;
+            @media screen and (max-width: 1089px) {
+                max-width: none;
+            }
         }
         
     }

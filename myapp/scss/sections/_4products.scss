@@ -1,9 +1,17 @@
 .products {
     padding: 143px 0 128px;
     overflow: hidden;
+
+    @media screen and (max-width: 880px) {
+        padding: 50px 0;
+    }
     &__wrap {
         position: relative;
         margin-top: 74px;
+
+        @media screen and (max-width: 880px) {
+            margin-top: 40px;
+        }
     }
     &__items {
         width: 72%;
@@ -13,12 +21,24 @@
                 opacity: 0;
             }
         }
+        @media screen and (max-width: 579px) {
+            width: 100%;
+        }
     }
     &__body {
         .wrap {
             max-width: 77%;
             display: flex;
             margin-right: 0;
+
+            @media screen and (max-width: 1200px) {
+                width: 100%;
+                max-width: none;
+            }
+            @media screen and (max-width: 579px) {
+                flex-wrap: wrap;
+            }
+
         }
     }
     &__num {
@@ -31,12 +51,27 @@
         font-size: 36px;
         line-height: 42px;
         font-family: "BebasNeueCyrillic", Arial, Helvetica, sans-serif;
+        @media screen and (max-width: 1340px) {
+            padding: 0 20px;
+        }
+        @media screen and (max-width: 579px) {
+            width: 250px;
+            font-size: 32px;
+            line-height: 1.2;
+        }
     }
     &__text {
         width: 80%;
         font-size: 14px;
         line-height: 24px;
         font-weight: 200;
+        @media screen and (max-width: 1340px) {
+            width: 100%;
+        }
+        @media screen and (max-width: 579px) {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
     }
     &__pic {
         position: relative;
@@ -51,6 +86,15 @@
             color: #292929;
             -webkit-text-stroke: 1px #292929;
             -webkit-text-fill-color: transparent;
+
+            @media screen and (max-width: 1200px) {
+                font-size: 145px;
+            }
+            @media screen and (max-width: 579px) {
+                font-size: 75px;
+                top: -91px;
+                left: 7%;
+            }
         }
     }
 }
@@ -62,6 +106,9 @@
         position: absolute;
         top: 0;
         right: 0;
+        @media screen and (max-width: 579px) {
+            right: 15px;
+        }
         svg {
             width: 25px;
         }

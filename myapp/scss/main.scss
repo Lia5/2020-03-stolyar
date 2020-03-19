@@ -64,6 +64,9 @@ b, strong {
 	max-width: 1234px;
 	padding: 0 34px;
 	margin: 0 auto;
+	@media screen and (max-width: 579px) {
+		padding: 0 15px;
+	}
 }
 a {
 	text-decoration: none;
@@ -106,6 +109,12 @@ ul,li {
 	text-align: center;
 	margin-top: -10px;
 	margin-bottom: 100px;
+	@media screen and (max-width: 880px) {
+		margin-bottom: 40px;
+	}
+	@media screen and (max-width: 579px) {
+		margin-top: 10px;
+	}
 	a {
 		text-decoration: underline;
 		&:hover {
@@ -120,6 +129,13 @@ ul,li {
 	line-height: 92px;
 	text-align: center;
 	color: $accent;
+	@media screen and (max-width: 579px) {
+		font-size: 40px;
+		line-height: 1.2;
+	}
+	@media screen and (max-width: 419px) {
+		font-size: 35px;
+	}
 	&--white {
 		color: #f9f9f9;
 	}
@@ -141,7 +157,9 @@ ul,li {
 	border: 1px solid #000;
 	min-width: 252px;
     text-align: center;
-	
+	@media screen and (max-width: 579px) {
+		padding: 15px 25px;
+	}
 	&:hover {
 		background-color: #212121;
 		color: #fff;

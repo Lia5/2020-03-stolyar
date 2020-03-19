@@ -2,7 +2,11 @@
     position: relative; 
     padding-bottom: 61px;
     @media screen and (max-width: 1660px) {
-        overflow: hidden;
+        // overflow: hidden;
+    }
+
+    @media screen and (max-width: 880px) {
+        padding-bottom: 0;
     }
     &:after {
         content: "";
@@ -12,11 +16,26 @@
         width: 327px;
         height: 733px;
         background: url('../img/home-pic.png') no-repeat;
+        z-index: -1;
+        @media screen and (max-width: 1450px) {
+            background-size: contain;
+            width: 250px;
+            height: 633px;
+            bottom: -313px;
+        }
+        @media screen and (max-width: 880px) {
+            content: none;
+        }
     }
     .wrap {
         display: flex;
-        @media screen and (max-width: 580px) {
+
+        @media screen and (max-width: 1450px) {
+            overflow: hidden;
+        }
+        @media screen and (max-width: 880px) {
             flex-wrap: wrap;
+            padding: 0;
         }
     }
     &__body {
@@ -25,12 +44,10 @@
         padding-top: 135px;
         padding-right: 20px;
         padding-bottom: 150px;
-        @media screen and (max-width: 580px) {
-            display: flex;
-            flex-direction: column;
-           justify-content: center;
-           padding-right: 0;
-           padding-bottom: 40px;
+        @media screen and (max-width: 880px) {
+            width: 100%;
+            padding: 40px 34px 40px;
+            margin-top: 20px;
         }
     }
     &__pre {
@@ -38,6 +55,8 @@
         line-height: 28px;
         font-weight: 200;
         margin-bottom: 31px;
+        @media screen and (max-width: 880px) {
+        }
         @media screen and (max-width: 580px) {
             font-size: 14px;
             line-height: 1.2;
@@ -47,11 +66,23 @@
     &__pic {
         position: relative;
         width: 50%;
+        @media screen and (max-width: 880px) {
+            width: 100%;
+            min-height: 400px;
+            margin-top: -320px;
+            z-index: -1;
+        }
         &:after {
             content: "";
             width: 704px;
             height: 704px;
             background: url('../img/home-bg.jpg') no-repeat;
+            @media screen and (max-width: 880px) {
+                width: 100%;
+                height: 100%;
+                filter: blur(5px);
+                opacity: 0.5;
+            }
         }
     }
 
@@ -65,7 +96,7 @@
             font-size: 45px;
             line-height: 1.2;
         }
-        @media screen and (max-width: 580px) {
+        @media screen and (max-width: 880px) {
             font-size: 24px;
         }
     }
@@ -94,8 +125,8 @@
             line-height: 1.2;
             padding: 20px;
         }
-        @media screen and (max-width: 580px) {
-
+        @media screen and (max-width: 880px) {
+            background: transparent;
         }
     }
     &__pic {

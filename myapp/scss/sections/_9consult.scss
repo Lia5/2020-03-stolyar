@@ -23,40 +23,72 @@
     &__top {
         display: flex;
         padding: 55px 144px 90px 40px;
-        @media screen and (max-width: 579px) {
-            flex-wrap: wrap;
-        }
         position: relative;
         background: url('../img/contact-bg.jpg') no-repeat;
         background-size: cover;
         background-position: top left;
+        @media screen and (max-width: 880px) {
+            padding: 40px;
+            flex-wrap: wrap;
+        }
+        @media screen and (max-width: 579px) {
+            padding: 20px;
+        }
     }
     &__part {
         width: 50%;
         padding-left: 123px;
+        @media screen and (max-width: 1125px) {
+            padding-left: 5%;
+        }
+        @media screen and (max-width: 880px) {
+            width: 100%;
+            padding-left: 0;
+        }
+        .logo {
+            @media screen and (max-width: 579px) {
+               margin: 0 auto;
+            }
+        }
     }
-    
+    &__form {
+        @media screen and (max-width: 880px) {
+            margin-top: 40px;
+        }
+    }
     &__title {
         margin-top: 65px;
         font-size: 30px;
         line-height: 40px;
         font-family: "BebasNeueCyrillic", Arial, Helvetica, sans-serif;
         margin-bottom: 8px;
-        @media screen and (max-width: 1115px) {
-            font-size: 33px;
+        @media screen and (max-width: 1125px) {
+            font-size: 26px;
             line-height: 1.2;
         }
-        @media screen and (max-width: 680px) {
-            font-size: 24px;
+        @media screen and (max-width: 880px) {
+            margin-top: 0;
+            margin-bottom: 20px;
         }
+
         img {
             display: inline-block;
             width: 22px;
             margin-right: 20px;
+            @media screen and (max-width: 579px) {
+                width: 17px;
+                margin-right: 11px;
+            }
         }
     }
     &__line {
         border-right: 1px solid #212121;
+        @media screen and (max-width: 880px) {
+            margin-top: 40px;
+        }
+        @media screen and (max-width: 579px) {
+            border: none;
+        }
     }
     &__text {
         font-weight: 200;
@@ -68,11 +100,21 @@
         display: flex;
         background: #fff;
         padding: 95px 144px 30px 70px;
+        @media screen and (max-width: 880px) {
+            flex-wrap: wrap;
+            padding: 40px;
+        }
+        @media screen and (max-width: 579px) {
+            padding: 20px;
+        }
         .consult__title {
             margin-top: 11px;
         }
         .consult__part:nth-child(1) {
             display: flex;
+            @media screen and (max-width: 579px) {
+                flex-wrap: wrap;
+            }
         }
         .logo__text {
             padding: 65px 23px 13px;
@@ -80,6 +122,11 @@
     }
     &__menu {
         margin: 0 auto;
+        @media screen and (max-width: 579px) {
+            margin: 30px 0 0 0;
+            width: 100%;
+            text-align: center;
+        }
         a {
             display: block;
             padding: 8px 0;
@@ -97,6 +144,9 @@
         font-size: 12px;
         line-height: 16px;
         padding-right: 54px;
+        @media screen and (max-width: 880px) {
+            padding-left: 0;
+        }
     }
     &__policy {
         font-size: 12px;
@@ -177,5 +227,5 @@
         
 }
 input.empty_field {
-    border: 1px solid red;
+    border-bottom: 1px solid red;
 }

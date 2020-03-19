@@ -1,16 +1,28 @@
 .life {
     padding: 158px 0 17px;
+
+    @media screen and (max-width: 880px) {
+        padding: 50px 0 17px;
+    }
     &__body {
         display: flex;
         margin-top: 60px;
+        @media screen and (max-width: 880px) {
+            flex-wrap: wrap;
+        }
     }
     &__left {
         width: 60%;
         padding-right: 13px;
         display: flex;
         flex-wrap: wrap;
+        @media screen and (max-width: 880px) {
+            width: 100%;
+            padding-right: 0;
+        }
         .life__pic {
             width: 30%;
+
         }
         .life__pic:nth-child(4) {
             width: 55%;
@@ -26,6 +38,9 @@
         padding-left: 10px;
         display: flex;
         flex-wrap: wrap;
+        @media screen and (max-width: 880px) {
+            width: 100%;
+        }
         .life__pic {
             width: 47%;
             width: calc(50% - 25px);
@@ -43,6 +58,9 @@
         margin-right: 24px;
         margin-bottom: 25px;
         flex-grow: 1;
+        @media screen and (max-width: 579px) {
+            margin-right: 13px;
+        }
         img {
             width: 100%;
         }
