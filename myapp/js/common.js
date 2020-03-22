@@ -205,7 +205,7 @@ $(function() {
                         method: "POST",
                         data: form2.serialize(),
                         // url: quizAjax.url,
-                        url: '../stolyar/sendamo.php',
+                        url: '../sendamo.php',
                         dataType: "json",
                         success: function (json) {
                             // if (json.success) {

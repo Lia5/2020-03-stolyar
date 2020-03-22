@@ -163,6 +163,9 @@ ul,li {
 	&:hover {
 		background-color: #212121;
 		color: #fff;
+		.kviz__btn {
+			color: #fff;
+		}
 	}
 	&:active {
 		background-color: #3a3a3a;
@@ -180,7 +183,6 @@ ul,li {
 			color: #c29566;
 		}
 	}
-
 }
 
 @import "sections/header";
