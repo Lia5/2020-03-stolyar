@@ -172,7 +172,11 @@
     }
 }
 .btn-finish {
-    padding-top: 20px;
+    padding: 0;
+    a {
+        display: block;
+        padding: 20px 45px 18px;
+    }
 }
 .form-line {
     display: flex;

@@ -214,9 +214,9 @@ $(function() {
                             // }
                         }
                     });
-                    $(this).attr('href', "#").removeClass('modal-open').removeClass('kviz__btn').css('pointer-events', 'none');
+                    fbq('track', 'Lead');
+                    $(this).attr('href', "#").removeClass('kviz__btn').css('pointer-events', 'none');
                     $(this).parent().css('opacity', '0.5').css('pointer-events', 'none');
-                    // fbq('track', 'Lead');
                     }
                 // fbq('track', 'Lead');
 
@@ -233,6 +233,18 @@ $(function() {
             return false;
         });
     }
+    $('.nav__phone').click(function(){
+        fbq('track', 'Contact');
+    });
+    $('.consult__title a').click(function(){
+        fbq('track', 'Contact');
+    });
+    $('.subtitle a').click(function(){
+        fbq('track', 'Lead_net');
+    });
+    $('.consult__icons a').click(function(){
+        fbq('track', 'Lead_net');
+    });
 
 });
 
