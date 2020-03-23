@@ -245,7 +245,7 @@ $(function() {
     $('.consult__icons a').click(function(){
         fbq('track', 'Lead_net');
     });
-
+    fbq('track', 'ViewContent');
 });
 
 
