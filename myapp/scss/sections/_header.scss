@@ -35,6 +35,9 @@ header {
     a  {
         display: block;
         padding: 20px 30px;
+        @media only screen and (max-width: 1240px) {
+            padding: 20px 11px;
+        }
     }
 
 }
@@ -54,6 +57,15 @@ header {
         margin-right: 16px;
         img {
             max-width: 100%;
+        }
+    }
+    .nav__text {
+        margin-top: 10px;
+        padding: 0 5px 0 10px;
+        max-width: 189px;
+        @media only screen and (max-width: 425px) {
+            font-size: 12px;
+            line-height: 1.2;
         }
     }
 }
