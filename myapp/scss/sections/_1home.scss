@@ -59,6 +59,15 @@
             padding-bottom: 87px;
             margin-top: 0;
         }
+        .agree-line {
+            @media screen and (max-width: 665px) {
+                max-width: 200px;
+            }
+
+            @media screen and (max-width: 500px) {
+                margin-bottom: 131px;
+            }
+        }
     }
     &__pre {
         font-size: 20px;
@@ -130,19 +139,44 @@
         @media screen and (max-width: 665px) {
             flex-direction: column;
         }
+
         .btn {
-            @media screen and (max-width: 580px) {
-                width: 242px;
+            margin-top: 0;
+            margin-left: 15px;
+            background: #262626;
+            color: #fff;
+            min-width: 187px;
+            @media screen and (max-width: 1054px) {
+                min-width: 150px;
+            }
+            @media screen and (max-width: 665px) {
+                width: 100%;
                 margin: 0 auto;
-                padding: 12px 10px;
-                font-size: 12px;
+                padding: 17px 10px;
+                // font-size: 12px;
             }
             @media screen and (max-width: 580px) {
-                background: #262626;
-                color: #fff;
                 padding: 18px 10px;
                 max-width: 183px;
                 min-width: 183px;
+            }
+            &:hover {
+                background: #fff;
+                color: #000;
+                a {
+                    color: #000;
+                }
+            }
+        }
+        .btn-finish a {
+            color: #FFF;
+
+            @media screen and (max-width: 665px) {
+                padding: 0 20px 0;
+            }
+
+            @media screen and (max-width: 580px) {
+                
             }
         }
     }
@@ -163,7 +197,33 @@
             font-size: 10px;
             line-height: 1.6;
             padding: 17px 0;
-            margin-bottom: 110px;
+            margin-bottom: 25px;
+        }
+    }
+    &__label {
+        flex-grow: 1;
+        @media screen and (max-width: 665px) {
+            width: 100%;
+        }
+        @media screen and (max-width: 580px) {
+            max-width: 183px;
+            min-width: 183px;
+        }
+        input {
+            border: 1px solid #000;
+            display: block;
+            padding: 23px 20px 21px;
+
+            @media screen and (max-width: 665px) {
+                max-width: 100%;
+                margin-left: 0;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+            @media screen and (max-width: 665px) {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
         }
     }
     &__pic {

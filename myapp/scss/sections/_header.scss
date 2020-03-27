@@ -44,6 +44,9 @@ header {
         @media only screen and (max-width: 1240px) {
             padding: 20px 11px;
         }
+        &:hover {
+            color: $accent;
+        }
     }
 
 }
@@ -66,18 +69,26 @@ header {
         }
     }
     .nav__text {
-        margin-top: 10px;
+        margin-top: 40px;
         padding: 0 5px 0 10px;
-        max-width: 189px;
-        @media only screen and (max-width: 425px) {
+        max-width: 170px;
+        font-size: 14px;
+        line-height: 18px;
+        @media only screen and (max-width: 500px) {
+            margin-top: 6px;
             font-size: 12px;
             line-height: 1.2;
         }
     }
 }
 .lang {
+    display: none;
     padding-top: 23px;
     margin-left: 20px;
+    @media screen and (max-width: 579px) {
+        padding-top: 32px;
+    }
+
     &__item {
         font-size: 14px;
         line-height: 22px;

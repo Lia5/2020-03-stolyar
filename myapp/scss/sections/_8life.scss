@@ -12,10 +12,13 @@
         }
     }
     &__left {
-        width: 60%;
+        width: 63%;
         padding-right: 13px;
         display: flex;
         flex-wrap: wrap;
+        @media screen and (max-width: 1130px) {
+            width: 69%;
+        }
         @media screen and (max-width: 880px) {
             width: 100%;
             padding-right: 0;
@@ -34,10 +37,13 @@
         }
     }
     &__right {
-        width: 40%;
+        width: 37%;
         padding-left: 10px;
         display: flex;
         flex-wrap: wrap;
+        @media screen and (max-width: 1130px) {
+            width: 31%;
+        }
         @media screen and (max-width: 880px) {
             width: 100%;
         }
@@ -63,6 +69,9 @@
         }
         img {
             width: 100%;
+        }
+        iframe {
+            max-width: 100%;
         }
         &:last-child {
             margin-right: 0;

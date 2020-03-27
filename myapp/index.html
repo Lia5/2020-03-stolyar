@@ -83,7 +83,26 @@
           <div class="home__pre">Мы сделаем все то, что вы не можете найти в магазинах!</div>
           <div class="home__title">Производим мебель  «как на картинке»</div>
           <div class="home__text">Получите бесплатную консультацию специалиста и закажите реализацию вашей задумки с учетом пожеланий, технических требований и бюджета</div>
-          <div class="home__btn"><a href="#consult" class="btn scroll-to">Получить</a></div>
+          <form action="">
+            <input type="hidden" name="utm_source" class="utm_source hidden">
+            <input type="hidden" name="utm_medium" class="utm_medium hidden">
+            <input type="hidden" name="utm_campaign" class="utm_campaign hidden">
+            <input type="hidden" name="utm_term" class="utm_term hidden">
+            <input type="hidden" name="utm_content" class="utm_content hidden">
+            <input type="hidden" name="info" value="Приватна консультація">
+            <div class="form">
+              <div class="home__btn">
+                <label class="home__label">
+                  <input type="text" placeholder="Телефон" name="phone" required class="rfield phone-mask">
+                </label>
+                <button type="submit" class="btn btn-finish"><a href="#modalFinish" class="kviz__btn">Получить</a></button>
+              </div>
+              <div class="agree-line">
+                <input id="modal__agree" type="checkbox" checked="" disabled="">
+                <label for="#modal__agree">Я согласен на обработку <a href="">персональных данных  </a></label>
+              </div>
+            </div>
+          </form>
         </div>
         <div class="home__pic"></div>
       </div>
@@ -106,7 +125,7 @@
           </div>
           <div class="doing__item">
             <div class="doing__num">04</div>
-            <div class="doing__text">Консультируем  по подбору материалов  и способу изготовления</div>
+            <div class="doing__text"> <a href="#consult" class="scroll-to">Консультируем </a>по подбору материалов  и способу изготовления</div>
           </div>
         </div>
       </div>
@@ -304,7 +323,7 @@
             <div class="life__pic"><img src="img/life5.jpg" alt="life"></div>
           </div>
           <div class="life__right">
-            <div class="life__pic"><img src="img/life6.jpg" alt="life"></div>
+            <div class="life__pic"><iframe width="560" height="315" src="https://www.youtube.com/embed/S-i-cc5NQ5M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
             <div class="life__pic"><img src="img/life7.jpg" alt="life"></div>
             <div class="life__pic"><img src="img/life8.jpg" alt="life"></div>
           </div>
@@ -314,7 +333,7 @@
     <section id="consult" class="consult">
       <div class="wrap">
         <div class="title">Хотите узнать больше?</div>
-        <div class="subtitle">Посмотрите наши работы в <a href="https://www.instagram.com/meblstudio_stolyar_te?r=nametag" target="_blank">Instagram </a>Или <a href="https://www.youtube.com/channel/UCYyiCFTWIkkI8HJpaihu1eA" target="_blank">в YouTube</a></div>
+        <div class="subtitle">Посмотрите наши работы в <a href="https://www.instagram.com/meblstudio_stolyar_te" target="_blank">Instagram </a>Или <a href="https://www.youtube.com/watch?v=WUFtMBRZC4k&amp;list=PLv8hiQ4w1g2556dYqCgGjvUbA-nF5RnRW" target="_blank">в YouTube</a></div>
         <div class="consult__body">
           <div class="consult__top">
             <div class="consult__part">

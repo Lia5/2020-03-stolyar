@@ -54,4 +54,9 @@
         -webkit-text-stroke: 1px $accent;
         -webkit-text-fill-color: white;
     }
+    &__text {
+        a {
+            color: $accent;;
+        }
+    }
 }
