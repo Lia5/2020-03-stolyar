@@ -37,6 +37,8 @@
             background: linear-gradient(bottom, #efefef 30%, #fefefe);
             flex-wrap: wrap;
             padding: 0;
+            background: url('../img/new-home-bg.png') no-repeat;
+            background-position: center;
         }
     }
     &__body {
@@ -48,10 +50,11 @@
         @media screen and (max-width: 880px) {
             width: 100%;
             max-width: none;
-            background: url('../img/home-bg-mob.jpg') no-repeat;
-            background-position: bottom right;
+            // background: url('../img/home-bg-mob.jpg') no-repeat;
+            // background-position: bottom right;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
             padding: 40px 180px 40px 28px;
-            margin-top: 20px;
         }
         @media screen and (max-width: 500px) {
             padding-top: 19px;
@@ -60,6 +63,11 @@
             margin-top: 0;
         }
         .agree-line {
+            @media screen and (max-width: 880px) {
+                a {
+                    color: #fff;
+                }
+            }
             @media screen and (max-width: 665px) {
                 max-width: 200px;
             }
@@ -106,7 +114,10 @@
             content: "";
             width: 704px;
             height: 704px;
-            background: url('../img/home-bg.jpg') no-repeat;
+            // background: url('../img/home-bg.jpg') no-repeat;
+            background: url('../img/new-home-bg.png') no-repeat;
+            background-position: center;
+            background-size: cover;
             @media screen and (max-width: 880px) {
                 width: 100%;
                 height: 100%;
@@ -213,7 +224,13 @@
             border: 1px solid #000;
             display: block;
             padding: 23px 20px 21px;
-
+            @media screen and (max-width: 880px) {
+                border-color: #fff;
+                color: #FFF;
+                &::placeholder {
+                    color: rgba(255, 255, 255, 0.5);
+                };
+            }
             @media screen and (max-width: 665px) {
                 max-width: 100%;
                 margin-left: 0;
@@ -234,5 +251,10 @@
             top: 0;
             left: 0;
         }
+    }
+}
+nav {
+    @media screen and (max-width: 880px) {
+        margin-bottom: 10px;
     }
 }
