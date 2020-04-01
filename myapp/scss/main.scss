@@ -184,6 +184,37 @@ ul,li {
 			color: #c29566;
 		}
 	}
+
+	&-to-top {
+		display: none;
+		position: fixed;
+		bottom: 20px;
+		right: 40px;
+		width: 40px;
+		height: 40px;
+		background: #fff;
+		border: 2px solid #212121;
+		z-index: 1;
+		&.active {
+			display: block;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			border: 2px solid #212121;
+			border-bottom: none;
+			border-left: none;
+			top: 58%;
+			left: 50%;
+			margin-right: -50%;
+			transform: translate(-50%,-50%) rotate(-45deg);
+		}
+		&:hover {
+			opacity: 0.8;
+		}
+	}
 }
 
 @import "sections/header";

@@ -31,17 +31,18 @@
     }
     &__top {
         display: flex;
-        padding: 55px 40px 0 40px;
+        padding: 55px 40px 90px 40px;
         position: relative;
         background: url('../img/contact-bg.jpg') no-repeat;
         background-size: cover;
         background-position: top left;
-        @media screen and (max-width: 880px) {
+        @media screen and (max-width: 950px) {
             padding: 40px;
             flex-wrap: wrap;
         }
         @media screen and (max-width: 579px) {
-            padding: 20px;
+            // padding: 20px;
+            padding: 0;
         }
     }
     &__part {
@@ -50,7 +51,7 @@
         @media screen and (max-width: 1125px) {
             padding-left: 5%;
         }
-        @media screen and (max-width: 880px) {
+        @media screen and (max-width: 950px) {
             width: 100%;
             padding-left: 0;
         }
@@ -61,7 +62,7 @@
         }
     }
     &__form {
-        @media screen and (max-width: 880px) {
+        @media screen and (max-width: 950px) {
             margin-top: 40px;
         }
     }
@@ -75,7 +76,7 @@
             font-size: 26px;
             line-height: 1.2;
         }
-        @media screen and (max-width: 880px) {
+        @media screen and (max-width: 950px) {
             margin-top: 0;
             margin-bottom: 20px;
             text-align: center;
@@ -96,7 +97,7 @@
     }
     &__line {
         border-right: 1px solid #212121;
-        @media screen and (max-width: 880px) {
+        @media screen and (max-width: 950px) {
             margin-top: 40px;
         }
         @media screen and (max-width: 579px) {
@@ -108,6 +109,10 @@
         font-size: 14px;
         line-height: 24px;
         margin-bottom: 20px;
+        
+        @media screen and (max-width: 950px) {
+            text-align: center;
+        }
     }
     &__bottom {
         display: flex;

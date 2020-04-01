@@ -250,6 +250,10 @@ $(function() {
 
 
 
+$(window).scroll(function(){
+    $('.btn-to-top').toggleClass('active', $(this).scrollTop() > 200);
+});
+
 document.addEventListener('DOMContentLoaded', function(){
 //menu
     var menu = document.querySelector('.menu-toggle');
@@ -258,6 +262,8 @@ document.addEventListener('DOMContentLoaded', function(){
         nav.classList.toggle('active');
         var navGamb = document.querySelector('.menu-toggle');
         navGamb.classList.toggle('active');
+        var navBody = document.getElementByTagName('body');
+        navBody.classList.toggle('body-modal-open');
     });
 
 });

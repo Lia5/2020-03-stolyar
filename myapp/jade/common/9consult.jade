@@ -12,7 +12,7 @@ section.consult#consult
                     .consult__text и давайте создавать уют в вашем пространстве вместе!
                     .consult__text Заполните форму, и специалист Stolyar.te свяжется с вами в ближайшее время!                    
                 .consult__part.consult__form
-                    form(action="", enctype="multipart/form-data")
+                    form(enctype="multipart/form-data", method="POST")
                         input.utm_source.hidden(type='hidden', name='utm_source')
                         input.utm_medium.hidden(type='hidden', name='utm_medium')
                         input.utm_campaign.hidden(type='hidden', name='utm_campaign')
@@ -60,7 +60,7 @@ section.consult#consult
                             a(href="mailto:derevo0383@gmail.com") derevo0383@gmail.com
             .consult__bottom
                 .consult__copy © 2020 Stolyar.te. Все права защищены
-                a(href="#").consult__policy Политика конфиденциальности
+                a(href="#policy").consult__policy.modal-open Политика конфиденциальности
                 .consult__icons
                     a(href="https://www.instagram.com/meblstudio_stolyar_te?r=nametag" target="_blank").consult__icon
                         img(src="img/icons/instagram.svg", alt="instagram")
