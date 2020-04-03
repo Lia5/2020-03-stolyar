@@ -12,7 +12,7 @@ section.consult#consult
                     .consult__text и давайте создавать уют в вашем пространстве вместе!
                     .consult__text Заполните форму, и специалист Stolyar.te свяжется с вами в ближайшее время!                    
                 .consult__part.consult__form
-                    form(enctype="multipart/form-data", method="POST")
+                    form(enctype="multipart/form-data" name="fileform")
                         input.utm_source.hidden(type='hidden', name='utm_source')
                         input.utm_medium.hidden(type='hidden', name='utm_medium')
                         input.utm_campaign.hidden(type='hidden', name='utm_campaign')
@@ -20,7 +20,6 @@ section.consult#consult
                         input.utm_content.hidden(type='hidden', name='utm_content')
                         input(type='hidden', name='info', value='Новий сайт - останній екран - Приватна консультація')
                         .form
-                            
                             label.form-line 
                                 img(src="img/icons/user.svg", alt="user")
                                 input(type="text" placeholder="Имя*" name="name2" required).rfield.name-icon
@@ -30,9 +29,9 @@ section.consult#consult
                             label.form-line 
                                 img(src="img/icons/email.svg", alt="email")
                                 textarea(name="description", rows="4" placeholder="Описание заказа*").required.rfield.name-icon
-                            label.form-line 
-                                img(src="img/icons/email.svg", alt="email")
-                                input(type="file" placeholder="Файл" name="file").name-icon
+                            //- label.form-line 
+                            //-     img(src="img/icons/email.svg", alt="email")
+                            //-     input(type="file" placeholder="Файл" name="file").name-icon
                             .agree-line
                                 input#modal__agree(type='checkbox', checked='', disabled='')
                                 label(for='#modal__agree') Я согласен на обработку 

@@ -49,18 +49,6 @@ $(function() {
             }
         }
     });
-
-    // //Делегируем события кнопок next prev по умолчанию нашим кнопкам, которые могут находится ыне контейнера слайдера
-	// var owl=$(".products__items.owl-carousel");
-	// owl.owlCarousel();
-	// //$(".next") - находим нашу кнопку
-	// $(".next").click(function(){
-	// 	owl.trigger("next.owl.carousel");
-	// });
-	// $(".prev").click(function(){
-	// 	owl.trigger("prev.owl.carousel");
-	// });
-
   
     //select-number form
     if(jQuery('.phone-mask').length) {
@@ -200,20 +188,64 @@ $(function() {
                     modal.addClass('flex');
                     $('body').addClass('body-modal-open');
                    
-                    form2 = form.closest('form');
-                    jQuery.ajax({
-                        method: "POST",
-                        data: form2.serialize(),
-                        // url: quizAjax.url,
-                        url: '../sendamo.php',
-                        dataType: "json",
-                        success: function (json) {
-                            // if (json.success) {
-                                // jQuery(".wizard-section").fadeOut(100);
-                                window.location.href = "/quiz-thanks/";
-                            // }
-                        }
-                    });
+                    var form2 = form.closest('form');
+                    if(form2.attr("name")){
+                        var form2 = document.forms.fileform;
+                        var formData = new FormData(form2);
+                        console.log(formData);
+                        $.ajax({
+                            method: "POST",
+                            data: formData,
+                            url: '../sendamo.php',
+                            type: 'POST',
+                            success: function (data) {
+                                    //тут трек GA если надо
+                                    // alert(data);
+                                    $('.rfield').val('');
+                                    console.log(data);
+                                },
+                            
+                            cache: false,
+                            contentType: false,
+                            processData: false
+                        });
+                    } else {
+                        jQuery.ajax({
+                            method: "POST",
+                            data: form2.serialize(),
+                            url: '../sendamo.php',
+                            dataType: "json",
+                            success: function (data) {
+                                //тут трек GA если надо
+                                
+                                $('.rfield').val('');
+                                console.log(data);
+                            },
+                        }); 
+                    }
+                    
+                    // jQuery.ajax({
+                    //     method: "POST",
+                    //     data: form2.serialize(),
+                    //     url: '../sendamo.php',
+                    //     dataType: "json",
+                    //     success: data
+                    // });
+                    // let formData = new FormData($(form2));
+                    // $.ajax({
+                    //     url: '../sendamo.php',
+                    //     type: 'POST',
+                    //     data: formData,
+                    //     success: function (data) {
+                    //         //тут трек GA если надо
+                    //         alert(data);
+                    //         console.log(data);
+                    //     },
+                    //     cache: false,
+                    //     contentType: false,
+                    //     processData: false
+                    // });
+
                     fbq('track', 'Lead');
                     btn.attr('href', "#").removeClass('kviz__btn').css('pointer-events', 'none');
                     btn.parent().css('opacity', '0.5').css('pointer-events', 'none');
